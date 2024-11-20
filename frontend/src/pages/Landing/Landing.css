@@ -1,0 +1,36 @@
+/* src/css/pages/Landing.css */
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.landing-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.landing-split-layout {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.landing-info-wrapper {
+  height: 100%;
+  background: #000;
+}
+
+.landing-auth-wrapper {
+  height: 100%;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .landing-split-layout {
+    grid-template-columns: 1fr;
+  }
+}
