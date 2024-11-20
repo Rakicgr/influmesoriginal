@@ -1,0 +1,442 @@
+/* AuthPanel.css */
+.auth-panel {
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  min-height: min-content;
+  padding: 2rem;
+  margin: auto 0;
+}
+
+.auth-content-scroll {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+  padding-right: 0.5rem;
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo h1 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: -0.02em;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.auth-header p {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.pin-verification {
+  margin: 2rem 0;
+}
+
+.pin-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.pin-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.pin-input:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.813rem;
+  color: #666;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #000;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.875rem;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-button:hover {
+  transform: translateY(-1px);
+  background: #1a1a1a;
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-button.secondary {
+  background: transparent;
+  color: #666;
+  border: 1.5px solid #eee;
+}
+
+.auth-button.secondary:hover {
+  background: #fafafa;
+  border-color: #ddd;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.auth-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.toggle-auth-mode {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.toggle-auth-mode:hover {
+  opacity: 0.8;
+}
+
+.user-type-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.user-type-button {
+  width: 100%;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-type-button:hover {
+  border-color: #000;
+  background: #fafafa;
+}
+
+.user-type-button.active {
+  border-color: #000;
+  background: #f5f5f5;
+}
+
+.user-type-button h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.user-type-button p {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Pending approval styles */
+.pending-approval {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.pending-approval p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Error message styles */
+.error-message {
+  background: #fff2f2;
+  color: #dc2626;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .auth-panel {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+  
+  .auth-container {
+    padding: 1.5rem;
+    margin: 0;
+  }
+  
+  .auth-logo h1 {
+    font-size: 1.75rem;
+  }
+  
+  .auth-content-scroll {
+    max-height: none;
+    overflow-y: visible;
+  }
+  
+  .user-type-button {
+    padding: 1rem;
+  }
+  
+  .pin-input {
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-panel {
+    padding: 0.5rem;
+  }
+  
+  .auth-container {
+    padding: 1rem;
+  }
+  
+  .auth-logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .auth-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .pin-inputs {
+    gap: 0.5rem;
+  }
+  
+  .pin-input {
+    width: 40px;
+    height: 40px;
+    font-size: 1.125rem;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .input-group input {
+    padding: 0.75rem;
+    font-size: 0.8125rem;
+  }
+  
+  .auth-button {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 360px) {
+  .auth-container {
+    padding: 0.75rem;
+  }
+  
+  .pin-input {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .user-type-button {
+    padding: 0.875rem;
+  }
+  
+  .user-type-button h3 {
+    font-size: 1rem;
+  }
+  
+  .user-type-button p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Handle height on smaller devices */
+@media (max-height: 600px) {
+  .auth-panel {
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+  
+  .auth-container {
+    margin: 0;
+  }
+  
+  .auth-logo {
+    margin-bottom: 1rem;
+  }
+}
+.auth-toggle-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  background: transparent;
+  color: #666;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-button.active {
+  border-color: #000;
+  background: #000;
+  color: white;
+}
+
+.phone-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-prefix {
+  width: 100px;
+  padding: 0.875rem;
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.phone-prefix:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.phone-group input[type="tel"] {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .phone-group {
+    flex-direction: row;
+  }
+  
+  .phone-prefix {
+    width: 90px;
+    padding: 0.75rem;
+  }
+  
+  .toggle-button {
+    padding: 0.625rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .phone-prefix {
+    width: 80px;
+    padding: 0.625rem;
+    font-size: 0.8125rem;
+  }
+  
+  .phone-group input[type="tel"] {
+    font-size: 0.8125rem;
+  }
+}
